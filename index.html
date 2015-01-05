@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Tabs</title>
+		<link rel="stylesheet" href="css/style.css?version=1.0" />
+	</head>
+	<body ng-app="tab">
+		<div class="containerTab" ng-controller="tabController as tabs">
+			<p class="loadError" ng-show="loadError"> {{errorMessage}} </p>
+			<div class="navTab">
+				<ul>
+					<li ng-class="{ active: isSelected(tab.id) }" ng-click="selectTab(tab.id)" ng-repeat="tab in tabsData">
+						<a href="#/{{tab.id}}"> {{tab.title}} </a>
+					</li>
+				</ul>
+			</div>
+			<div class="contentTab" ng-show="!loadError">
+				<div>
+					<ng-view></ng-view>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/lib/angular.min.js?version=1.0"></script>
+		<script src="js/lib/angular-route.min.js?version=1.0"></script>
+		<script src="js/script.js?version=1.0"></script>
+	</body>
+</html>

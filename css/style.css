@@ -1,0 +1,57 @@
+.loadError {
+  padding-top: 200px;
+  font-size: 24px;
+  text-align: center;
+  color: red;
+}
+
+.navTab ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.navTab li {
+  display: inline-block;
+  border: 1px solid #073505;
+  background: #eafff8;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.navTab li a {
+  display: block;
+  padding: 8px 35px;
+  border-radius: 25px 25px 0px 0px;
+  text-decoration: none;
+  border: 3px dotted #52dacc;
+  color: #073505;
+}
+
+.navTab li a:hover {
+  box-shadow: inset 0px 0px 5px darkblue;
+}
+
+.navTab li.active {
+  background: #7dffd3;
+  border-bottom: none;
+}
+
+.navTab li.active a {
+  border: 3px dotted #24bb31;
+  border-bottom: none;
+  margin-bottom: 2px;
+  padding-bottom: 14px;
+  position: relative;
+  z-index: 10;
+}
+
+.contentTab {
+  margin-top: -3px;
+  background: #7dffd3;
+  border: 1px solid #073505;
+}
+
+.contentTab div {
+  padding: 20px 15px;
+  border: 3px dotted #24bb31;
+}
